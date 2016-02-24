@@ -25,4 +25,8 @@ class TestGame< MiniTest::Test
     assert_equal(0, @monster.check_health)
   end
 
+  def test_game_over
+    assert_equal(false, @game.game_over)
+   end 
+
 end

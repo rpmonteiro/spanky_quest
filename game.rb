@@ -16,4 +16,13 @@ class Game
     next_turn()
   end
 
+  def game_over
+    return false
+    
+  end
+
+  def next_turn
+    
+  end
+
 end
