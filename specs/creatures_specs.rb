@@ -69,4 +69,14 @@ class TestCreatures < Minitest::Test
     assert_equal(90, @monster1.attack(@player))
   end
 
+  ### Player move
+  def test_player_move
+    @player.move
+    assert_equal(1, @player.position)
+  end
+
+  def test_rest_full_health
+    assert_equal(false, @player.check_health)
+  end
+
 end

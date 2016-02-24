@@ -8,8 +8,8 @@ class TestDungeon< MiniTest::Test
   def setup
 
     modifiers = {
-      2 => @monster,
-      4 => @enigma
+      1 => 'monster',
+      3 => 'enigma'
     }
 
     @dungeon = Dungeon.new(5, modifiers)
@@ -21,17 +21,15 @@ class TestDungeon< MiniTest::Test
   end
 
   def test_modifier_2
-    assert_equal(@monster, @dungeon.path[2])
+    assert_equal('monster', @dungeon.path[1])
   end
 
   def test_modifier_4
-    assert_equal(@enigma, @dungeon.path[4])
+    assert_equal('enigma', @dungeon.path[3])
   end
 
   def test_end_tile
     assert_equal(4, @dungeon.end_tile)
   end
-
-
 
 end

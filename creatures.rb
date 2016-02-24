@@ -1,9 +1,10 @@
 class Creatures
 
-  attr_reader :name, :attack_damage  
-  attr_accessor :health
+  attr_reader :name, :attack_damage 
+  attr_accessor :health, :position 
 
   def initialize(params)
+    @position = 0
     @name = params[:name]
     @health = params[:health]
     @attack_damage = params[:attack_damage]
@@ -18,6 +19,10 @@ class Creatures
     @health <= 0 ? you_are_dead : @health
   end
 
+  def is_dead?
+    @health <= 0 ? true : false
+  end
+
 end
 
 
@@ -25,11 +30,13 @@ class Player < Creatures
   attr_reader :name, :health, :attack_damage
 
   def move()
-
+    @position += 1
   end
 
   def rest()
-
+    unless @player.check_health == 100 
+      @player.health += 25
+    end
   end
 
 end
