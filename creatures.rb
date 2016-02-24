@@ -1,6 +1,6 @@
 class Creature
 
-  attr_reader :name
+  attr_reader :name, :health, :attack
 
   def initialize(params)
     @name = params[:name]
