@@ -29,4 +29,10 @@ class TestGame< MiniTest::Test
     assert_equal(false, @game.game_over)
    end 
 
+   def test_is_dead
+      assert_equal(false, @player.is_dead?)
+      @player.health = 0 
+      assert_equal(true, @player.is_dead?)
+   end
+
 end
