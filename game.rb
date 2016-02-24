@@ -5,4 +5,15 @@ class Game
     @player = player
   end
 
+  def fight(player, monster)
+    while player.check_health > 0
+      player.attack(monster)
+      if monster.check_health <= 0 
+         break
+      else monster.attack(player)
+      end
+    end
+    next_turn()
+  end
+
 end

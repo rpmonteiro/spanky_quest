@@ -1,6 +1,7 @@
 class Creatures
 
-  attr_reader :name, :health, :attack_damage  
+  attr_reader :name, :attack_damage  
+  attr_accessor :health
 
   def initialize(params)
     @name = params[:name]
@@ -9,11 +10,12 @@ class Creatures
   end
 
   def attack(target)
-    target.health - @attack_damage
+    target.health -= @attack_damage
   end
 
   def check_health
-    return @health
+    you_are_dead = 0
+    @health <= 0 ? you_are_dead : @health
   end
 
 end
