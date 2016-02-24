@@ -10,6 +10,8 @@ class TestCreatures < Minitest::Test
 
    @player = Player.new(name: "Spanky", health: 100, attack_damage: 20 )
 
+   @monster = Monster.new(name: "Goblin", health: 50, attack_damage: 5)
+
    @monster1 = Monster.new(name: "Dragon", health: 75, attack_damage: 10)
   end
 
@@ -17,6 +19,10 @@ class TestCreatures < Minitest::Test
   #### Creatures Object
   def test_creature_has_name
     assert_equal("Topogigio", @creatures1.name)
+  end
+
+  def test_check_health
+    assert_equal(75, @creatures1.check_health())
   end
 
   def test_creature_has_health
@@ -56,9 +62,11 @@ class TestCreatures < Minitest::Test
 
   ### Player attack
   def test_player_attacks
-    expected_result = @monster1.health - 20
-    @player.attack( @monster1 )
-    assert_equal( expected_result, @player.attack(@monster1)) 
+    assert_equal(55, @player.attack(@monster1)) 
+  end
+
+  def test_monster_attacks
+    assert_equal(90, @monster1.attack(@player))
   end
 
 end
