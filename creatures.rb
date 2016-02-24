@@ -12,7 +12,11 @@ end
 
 
 class Player < Creatures
+  attr_reader :name, :health, :attack
 
+end
+
+class Monster < Creatures
   attr_reader :name, :health, :attack
 
 end
