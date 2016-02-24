@@ -61,5 +61,4 @@ class TestCreatures < Minitest::Test
     assert_equal( expected_result, @player.attack(@monster1)) 
   end
 
-
 end
