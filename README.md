@@ -4,8 +4,8 @@ CodeClan Cohort 3 - OOP Mini-Project
 
 Contributors:  
 [Ricardo Monteiro](https://github.com/rpmonteiro)  
-[Francesco Palma](https://github.com/FrancescoPalma)
-[Jarrod Bennie](https://github.com/JarrodBennie)
+[Francesco Palma](https://github.com/FrancescoPalma)  
+[Jarrod Bennie](https://github.com/JarrodBennie)  
 [Matthew Hogg](https://github.com/MHogg8)  
   
 Description:  
