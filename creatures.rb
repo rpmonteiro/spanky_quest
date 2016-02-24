@@ -18,6 +18,10 @@ class Creatures
     @health <= 0 ? you_are_dead : @health
   end
 
+  def is_dead?
+    @health <= 0 ? true : false
+  end
+
 end
 
 

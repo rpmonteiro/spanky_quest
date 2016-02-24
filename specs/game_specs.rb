@@ -32,6 +32,7 @@ class TestGame< MiniTest::Test
     assert_equal(0, @monster.check_health)
   end
 
+<<<<<<< HEAD
   def test_next_turn
     
   end
@@ -39,5 +40,16 @@ class TestGame< MiniTest::Test
   def test_game_over
     assert_equal(false, @game.game_over)
   end
+=======
+  def test_game_over
+    assert_equal(false, @game.game_over)
+   end 
+
+   def test_is_dead
+      assert_equal(false, @player.is_dead?)
+      @player.health = 0 
+      assert_equal(true, @player.is_dead?)
+   end
+>>>>>>> game_functionalities
 
 end
