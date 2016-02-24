@@ -8,8 +8,12 @@ class Creatures
     @attack_damage = params[:attack_damage]
   end
 
-  def attack( target )
+  def attack(target)
     target.health - @attack_damage
+  end
+
+  def check_health
+    return @health
   end
 
 end

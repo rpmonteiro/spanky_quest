@@ -19,6 +19,10 @@ class TestCreatures < Minitest::Test
     assert_equal("Topogigio", @creatures1.name)
   end
 
+  def test_check_health
+    assert_equal(75, @creatures1.check_health())
+  end
+
   def test_creature_has_health
     assert_equal(75, @creatures1.health)
   end
@@ -57,8 +61,8 @@ class TestCreatures < Minitest::Test
   ### Player attack
   def test_player_attacks
     expected_result = @monster1.health - 20
-    @player.attack( @monster1 )
-    assert_equal( expected_result, @player.attack(@monster1)) 
+    @player.attack(@monster1)
+    assert_equal(expected_result, @player.attack(@monster1)) 
   end
 
 end
