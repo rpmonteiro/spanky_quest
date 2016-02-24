@@ -1,6 +1,6 @@
 # spanky_quest
 
-CodeClan Cohort 3 - OOP Mini-Project  
+CodeClan Cohort 3 - OOP Team mini-Project (Pair Programming)  
 
 Contributors:  
 [Ricardo Monteiro](https://github.com/rpmonteiro)  
